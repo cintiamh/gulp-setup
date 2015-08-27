@@ -19,8 +19,18 @@ module.exports = {
         src: src + '/images/**',
         dest: dest + '/images'
     },
-    markup: {
-        src: src + '/htdocs/**',
+    browserify: {
+        bundleConfigs: [{
+            entries: src + '/js/main.js',
+            dest: dest,
+            outputName: 'app.js'
+            // list of externally available modules to exclude from the bundle
+            // external: ['jquery','underscore']
+        }]
+    },
+    production: {
+        cssSrc: dest + '/css/*.css',
+        jsSrc: dest + '/js/*.js',
         dest: dest
     }
-}
+};
