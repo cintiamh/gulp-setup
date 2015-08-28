@@ -9,7 +9,7 @@ module.exports = {
     },
     sass: {
         src: src +'/sass/**/*.{sass,scss}',
-        dest: dest + '/css',
+        dest: dest + '',
         settings: {
             indentedSyntax: false,
             imagePath: 'images'
@@ -33,8 +33,8 @@ module.exports = {
         }]
     },
     production: {
-        cssSrc: dest + '/css/*.css',
-        jsSrc: dest + '/js/*.js',
+        cssSrc: dest + '/*.css',
+        jsSrc: dest + '/*.js',
         dest: dest
     }
 };
