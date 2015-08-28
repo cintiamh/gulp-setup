@@ -19,6 +19,10 @@ module.exports = {
         src: src + '/images/**',
         dest: dest + '/images'
     },
+    markup: {
+        src: src + "/htdocs/**",
+        dest: dest
+    },
     browserify: {
         bundleConfigs: [{
             entries: src + '/js/main.js',
